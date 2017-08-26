@@ -7,15 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70AE46FE1F4C046C000E0160 /* MyBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46E01F4C046C000E0160 /* MyBaseLayout.m */; };
+		70AE46FF1F4C046C000E0160 /* MyDimeScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46E21F4C046C000E0160 /* MyDimeScale.m */; };
+		70AE47001F4C046C000E0160 /* MyFloatLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46E41F4C046C000E0160 /* MyFloatLayout.m */; };
+		70AE47011F4C046C000E0160 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46E61F4C046C000E0160 /* MyFlowLayout.m */; };
+		70AE47021F4C046C000E0160 /* MyFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46E81F4C046C000E0160 /* MyFrameLayout.m */; };
+		70AE47031F4C046C000E0160 /* MyLayoutPos.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46ED1F4C046C000E0160 /* MyLayoutPos.m */; };
+		70AE47041F4C046C000E0160 /* MyLayoutSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46F01F4C046C000E0160 /* MyLayoutSize.m */; };
+		70AE47051F4C046C000E0160 /* MyLayoutSizeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46F21F4C046C000E0160 /* MyLayoutSizeClass.m */; };
+		70AE47061F4C046C000E0160 /* MyLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46F51F4C046C000E0160 /* MyLinearLayout.m */; };
+		70AE47071F4C046C000E0160 /* MyMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46F71F4C046C000E0160 /* MyMaker.m */; };
+		70AE47081F4C046C000E0160 /* MyPathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46F91F4C046C000E0160 /* MyPathLayout.m */; };
+		70AE47091F4C046C000E0160 /* MyRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46FB1F4C046C000E0160 /* MyRelativeLayout.m */; };
+		70AE470A1F4C046C000E0160 /* MyTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE46FD1F4C046C000E0160 /* MyTableLayout.m */; };
+		70AE47141F4C0544000E0160 /* CFTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE470F1F4C0544000E0160 /* CFTool.m */; };
+		70AE47151F4C0544000E0160 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE47111F4C0544000E0160 /* YYFPSLabel.m */; };
+		70AE47161F4C0544000E0160 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE47131F4C0544000E0160 /* YYWeakProxy.m */; };
+		70AE47521F4C2A5B000E0160 /* CFFlowButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE474F1F4C2A5B000E0160 /* CFFlowButtonView.m */; };
+		70AE47531F4C2A5B000E0160 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE47511F4C2A5B000E0160 /* UIView+Extension.m */; };
+		70AE47561F4C2B73000E0160 /* MyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AE47551F4C2B73000E0160 /* MyButton.xib */; };
+		70AE47591F4C2FB5000E0160 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE47581F4C2FB5000E0160 /* MainViewController.m */; };
+		70AE475C1F4EBE3A000E0160 /* BussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AE475B1F4EBE3A000E0160 /* BussViewController.m */; };
 		70E6A10A1F3EE3150057C10F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6A1091F3EE3150057C10F /* main.m */; };
 		70E6A10D1F3EE3150057C10F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6A10C1F3EE3150057C10F /* AppDelegate.m */; };
 		70E6A1101F3EE3150057C10F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6A10F1F3EE3150057C10F /* ViewController.m */; };
 		70E6A1131F3EE3150057C10F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E6A1111F3EE3150057C10F /* Main.storyboard */; };
 		70E6A1151F3EE3150057C10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E6A1141F3EE3150057C10F /* Assets.xcassets */; };
 		70E6A1181F3EE3150057C10F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E6A1161F3EE3150057C10F /* LaunchScreen.storyboard */; };
+		F899BBE328853A3924376B2F /* libPods-infbigios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C5F4F631D2EBFCC82E4AD7 /* libPods-infbigios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70AE46DF1F4C046C000E0160 /* MyBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseLayout.h; sourceTree = "<group>"; };
+		70AE46E01F4C046C000E0160 /* MyBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseLayout.m; sourceTree = "<group>"; };
+		70AE46E11F4C046C000E0160 /* MyDimeScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDimeScale.h; sourceTree = "<group>"; };
+		70AE46E21F4C046C000E0160 /* MyDimeScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDimeScale.m; sourceTree = "<group>"; };
+		70AE46E31F4C046C000E0160 /* MyFloatLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFloatLayout.h; sourceTree = "<group>"; };
+		70AE46E41F4C046C000E0160 /* MyFloatLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFloatLayout.m; sourceTree = "<group>"; };
+		70AE46E51F4C046C000E0160 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		70AE46E61F4C046C000E0160 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
+		70AE46E71F4C046C000E0160 /* MyFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFrameLayout.h; sourceTree = "<group>"; };
+		70AE46E81F4C046C000E0160 /* MyFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFrameLayout.m; sourceTree = "<group>"; };
+		70AE46E91F4C046C000E0160 /* MyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayout.h; sourceTree = "<group>"; };
+		70AE46EA1F4C046C000E0160 /* MyLayoutDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDef.h; sourceTree = "<group>"; };
+		70AE46EB1F4C046C000E0160 /* MyLayoutInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutInner.h; sourceTree = "<group>"; };
+		70AE46EC1F4C046C000E0160 /* MyLayoutPos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPos.h; sourceTree = "<group>"; };
+		70AE46ED1F4C046C000E0160 /* MyLayoutPos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutPos.m; sourceTree = "<group>"; };
+		70AE46EE1F4C046C000E0160 /* MyLayoutPosInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPosInner.h; sourceTree = "<group>"; };
+		70AE46EF1F4C046C000E0160 /* MyLayoutSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSize.h; sourceTree = "<group>"; };
+		70AE46F01F4C046C000E0160 /* MyLayoutSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutSize.m; sourceTree = "<group>"; };
+		70AE46F11F4C046C000E0160 /* MyLayoutSizeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSizeClass.h; sourceTree = "<group>"; };
+		70AE46F21F4C046C000E0160 /* MyLayoutSizeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutSizeClass.m; sourceTree = "<group>"; };
+		70AE46F31F4C046C000E0160 /* MyLayoutSizeInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSizeInner.h; sourceTree = "<group>"; };
+		70AE46F41F4C046C000E0160 /* MyLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLinearLayout.h; sourceTree = "<group>"; };
+		70AE46F51F4C046C000E0160 /* MyLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLinearLayout.m; sourceTree = "<group>"; };
+		70AE46F61F4C046C000E0160 /* MyMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMaker.h; sourceTree = "<group>"; };
+		70AE46F71F4C046C000E0160 /* MyMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMaker.m; sourceTree = "<group>"; };
+		70AE46F81F4C046C000E0160 /* MyPathLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPathLayout.h; sourceTree = "<group>"; };
+		70AE46F91F4C046C000E0160 /* MyPathLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPathLayout.m; sourceTree = "<group>"; };
+		70AE46FA1F4C046C000E0160 /* MyRelativeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelativeLayout.h; sourceTree = "<group>"; };
+		70AE46FB1F4C046C000E0160 /* MyRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRelativeLayout.m; sourceTree = "<group>"; };
+		70AE46FC1F4C046C000E0160 /* MyTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableLayout.h; sourceTree = "<group>"; };
+		70AE46FD1F4C046C000E0160 /* MyTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableLayout.m; sourceTree = "<group>"; };
+		70AE470E1F4C0544000E0160 /* CFTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTool.h; sourceTree = "<group>"; };
+		70AE470F1F4C0544000E0160 /* CFTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTool.m; sourceTree = "<group>"; };
+		70AE47101F4C0544000E0160 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		70AE47111F4C0544000E0160 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		70AE47121F4C0544000E0160 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		70AE47131F4C0544000E0160 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		70AE474E1F4C2A5B000E0160 /* CFFlowButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFlowButtonView.h; sourceTree = "<group>"; };
+		70AE474F1F4C2A5B000E0160 /* CFFlowButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFFlowButtonView.m; sourceTree = "<group>"; };
+		70AE47501F4C2A5B000E0160 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		70AE47511F4C2A5B000E0160 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		70AE47551F4C2B73000E0160 /* MyButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyButton.xib; sourceTree = "<group>"; };
+		70AE47571F4C2FB5000E0160 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		70AE47581F4C2FB5000E0160 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		70AE475A1F4EBE3A000E0160 /* BussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BussViewController.h; sourceTree = "<group>"; };
+		70AE475B1F4EBE3A000E0160 /* BussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BussViewController.m; sourceTree = "<group>"; };
 		70E6A1051F3EE3150057C10F /* infbigios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infbigios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E6A1091F3EE3150057C10F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70E6A10B1F3EE3150057C10F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +94,9 @@
 		70E6A1141F3EE3150057C10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70E6A1171F3EE3150057C10F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70E6A1191F3EE3150057C10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96D571977F6AB9647063C93E /* Pods-infbigios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infbigios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-infbigios/Pods-infbigios.debug.xcconfig"; sourceTree = "<group>"; };
+		D92C1D1D9F471A35FF21610D /* Pods-infbigios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infbigios.release.xcconfig"; path = "Pods/Target Support Files/Pods-infbigios/Pods-infbigios.release.xcconfig"; sourceTree = "<group>"; };
+		F3C5F4F631D2EBFCC82E4AD7 /* libPods-infbigios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infbigios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +104,105 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F899BBE328853A3924376B2F /* libPods-infbigios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08F38A54A2E0A33012F9ED81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96D571977F6AB9647063C93E /* Pods-infbigios.debug.xcconfig */,
+				D92C1D1D9F471A35FF21610D /* Pods-infbigios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		317E410EF8B43BB796195862 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3C5F4F631D2EBFCC82E4AD7 /* libPods-infbigios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70AE46DD1F4C0438000E0160 /* MyLayout */ = {
+			isa = PBXGroup;
+			children = (
+				70AE46DE1F4C046C000E0160 /* Lib */,
+			);
+			name = MyLayout;
+			sourceTree = "<group>";
+		};
+		70AE46DE1F4C046C000E0160 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				70AE46DF1F4C046C000E0160 /* MyBaseLayout.h */,
+				70AE46E01F4C046C000E0160 /* MyBaseLayout.m */,
+				70AE46E11F4C046C000E0160 /* MyDimeScale.h */,
+				70AE46E21F4C046C000E0160 /* MyDimeScale.m */,
+				70AE46E31F4C046C000E0160 /* MyFloatLayout.h */,
+				70AE46E41F4C046C000E0160 /* MyFloatLayout.m */,
+				70AE46E51F4C046C000E0160 /* MyFlowLayout.h */,
+				70AE46E61F4C046C000E0160 /* MyFlowLayout.m */,
+				70AE46E71F4C046C000E0160 /* MyFrameLayout.h */,
+				70AE46E81F4C046C000E0160 /* MyFrameLayout.m */,
+				70AE46E91F4C046C000E0160 /* MyLayout.h */,
+				70AE46EA1F4C046C000E0160 /* MyLayoutDef.h */,
+				70AE46EB1F4C046C000E0160 /* MyLayoutInner.h */,
+				70AE46EC1F4C046C000E0160 /* MyLayoutPos.h */,
+				70AE46ED1F4C046C000E0160 /* MyLayoutPos.m */,
+				70AE46EE1F4C046C000E0160 /* MyLayoutPosInner.h */,
+				70AE46EF1F4C046C000E0160 /* MyLayoutSize.h */,
+				70AE46F01F4C046C000E0160 /* MyLayoutSize.m */,
+				70AE46F11F4C046C000E0160 /* MyLayoutSizeClass.h */,
+				70AE46F21F4C046C000E0160 /* MyLayoutSizeClass.m */,
+				70AE46F31F4C046C000E0160 /* MyLayoutSizeInner.h */,
+				70AE46F41F4C046C000E0160 /* MyLinearLayout.h */,
+				70AE46F51F4C046C000E0160 /* MyLinearLayout.m */,
+				70AE46F61F4C046C000E0160 /* MyMaker.h */,
+				70AE46F71F4C046C000E0160 /* MyMaker.m */,
+				70AE46F81F4C046C000E0160 /* MyPathLayout.h */,
+				70AE46F91F4C046C000E0160 /* MyPathLayout.m */,
+				70AE46FA1F4C046C000E0160 /* MyRelativeLayout.h */,
+				70AE46FB1F4C046C000E0160 /* MyRelativeLayout.m */,
+				70AE46FC1F4C046C000E0160 /* MyTableLayout.h */,
+				70AE46FD1F4C046C000E0160 /* MyTableLayout.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		70AE474D1F4C29F8000E0160 /* CFFlowButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				70AE474E1F4C2A5B000E0160 /* CFFlowButtonView.h */,
+				70AE474F1F4C2A5B000E0160 /* CFFlowButtonView.m */,
+				70AE47501F4C2A5B000E0160 /* UIView+Extension.h */,
+				70AE47511F4C2A5B000E0160 /* UIView+Extension.m */,
+			);
+			name = CFFlowButtonView;
+			sourceTree = "<group>";
+		};
+		70AE47541F4C2B63000E0160 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				70AE47551F4C2B73000E0160 /* MyButton.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		70E6A0FC1F3EE3150057C10F = {
 			isa = PBXGroup;
 			children = (
+				70AE47541F4C2B63000E0160 /* view */,
+				70AE474D1F4C29F8000E0160 /* CFFlowButtonView */,
+				70AE46DD1F4C0438000E0160 /* MyLayout */,
 				70E6A1071F3EE3150057C10F /* infbigios */,
 				70E6A1061F3EE3150057C10F /* Products */,
+				08F38A54A2E0A33012F9ED81 /* Pods */,
+				317E410EF8B43BB796195862 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +219,18 @@
 			children = (
 				70E6A10B1F3EE3150057C10F /* AppDelegate.h */,
 				70E6A10C1F3EE3150057C10F /* AppDelegate.m */,
+				70AE47571F4C2FB5000E0160 /* MainViewController.h */,
+				70AE47581F4C2FB5000E0160 /* MainViewController.m */,
+				70AE475A1F4EBE3A000E0160 /* BussViewController.h */,
+				70AE475B1F4EBE3A000E0160 /* BussViewController.m */,
 				70E6A10E1F3EE3150057C10F /* ViewController.h */,
 				70E6A10F1F3EE3150057C10F /* ViewController.m */,
+				70AE470E1F4C0544000E0160 /* CFTool.h */,
+				70AE470F1F4C0544000E0160 /* CFTool.m */,
+				70AE47101F4C0544000E0160 /* YYFPSLabel.h */,
+				70AE47111F4C0544000E0160 /* YYFPSLabel.m */,
+				70AE47121F4C0544000E0160 /* YYWeakProxy.h */,
+				70AE47131F4C0544000E0160 /* YYWeakProxy.m */,
 				70E6A1111F3EE3150057C10F /* Main.storyboard */,
 				70E6A1141F3EE3150057C10F /* Assets.xcassets */,
 				70E6A1161F3EE3150057C10F /* LaunchScreen.storyboard */,
@@ -86,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70E6A11C1F3EE3150057C10F /* Build configuration list for PBXNativeTarget "infbigios" */;
 			buildPhases = (
+				D1754AA9076651F6A854E9C1 /* [CP] Check Pods Manifest.lock */,
 				70E6A1011F3EE3150057C10F /* Sources */,
 				70E6A1021F3EE3150057C10F /* Frameworks */,
 				70E6A1031F3EE3150057C10F /* Resources */,
+				13A8F187D273FD8B63A7A5B2 /* [CP] Embed Pods Frameworks */,
+				5F701689557616075683009F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,19 +313,88 @@
 				70E6A1181F3EE3150057C10F /* LaunchScreen.storyboard in Resources */,
 				70E6A1151F3EE3150057C10F /* Assets.xcassets in Resources */,
 				70E6A1131F3EE3150057C10F /* Main.storyboard in Resources */,
+				70AE47561F4C2B73000E0160 /* MyButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13A8F187D273FD8B63A7A5B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-infbigios/Pods-infbigios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F701689557616075683009F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-infbigios/Pods-infbigios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1754AA9076651F6A854E9C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70E6A1011F3EE3150057C10F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AE46FE1F4C046C000E0160 /* MyBaseLayout.m in Sources */,
+				70AE47021F4C046C000E0160 /* MyFrameLayout.m in Sources */,
+				70AE46FF1F4C046C000E0160 /* MyDimeScale.m in Sources */,
 				70E6A1101F3EE3150057C10F /* ViewController.m in Sources */,
+				70AE47161F4C0544000E0160 /* YYWeakProxy.m in Sources */,
+				70AE47071F4C046C000E0160 /* MyMaker.m in Sources */,
+				70AE47031F4C046C000E0160 /* MyLayoutPos.m in Sources */,
+				70AE470A1F4C046C000E0160 /* MyTableLayout.m in Sources */,
+				70AE47141F4C0544000E0160 /* CFTool.m in Sources */,
 				70E6A10D1F3EE3150057C10F /* AppDelegate.m in Sources */,
+				70AE47061F4C046C000E0160 /* MyLinearLayout.m in Sources */,
+				70AE47591F4C2FB5000E0160 /* MainViewController.m in Sources */,
+				70AE47051F4C046C000E0160 /* MyLayoutSizeClass.m in Sources */,
+				70AE47041F4C046C000E0160 /* MyLayoutSize.m in Sources */,
+				70AE47521F4C2A5B000E0160 /* CFFlowButtonView.m in Sources */,
+				70AE47001F4C046C000E0160 /* MyFloatLayout.m in Sources */,
 				70E6A10A1F3EE3150057C10F /* main.m in Sources */,
+				70AE47081F4C046C000E0160 /* MyPathLayout.m in Sources */,
+				70AE475C1F4EBE3A000E0160 /* BussViewController.m in Sources */,
+				70AE47531F4C2A5B000E0160 /* UIView+Extension.m in Sources */,
+				70AE47091F4C046C000E0160 /* MyRelativeLayout.m in Sources */,
+				70AE47151F4C0544000E0160 /* YYFPSLabel.m in Sources */,
+				70AE47011F4C046C000E0160 /* MyFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +514,7 @@
 		};
 		70E6A11D1F3EE3150057C10F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96D571977F6AB9647063C93E /* Pods-infbigios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BRSAU2S97C;
@@ -285,6 +527,7 @@
 		};
 		70E6A11E1F3EE3150057C10F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D92C1D1D9F471A35FF21610D /* Pods-infbigios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BRSAU2S97C;
@@ -314,6 +557,7 @@
 				70E6A11E1F3EE3150057C10F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
