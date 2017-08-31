@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "__37-[MainViewController dismissKeyBoard]_block_invoke:MainViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController TouchDownInside:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController addSearchView]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "rx.size.width">
+            </PersistentString>
+            <PersistentString
+               value = "SearchView2.contentSize">
+            </PersistentString>
+            <PersistentString
+               value = "self.list1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController viewDidLoad]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame.origin.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
