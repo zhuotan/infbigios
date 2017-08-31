@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+Extension.h"
+
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *MyScrollView;
 
 @end
 

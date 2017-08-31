@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+Extension.h"
 
-@interface CFFlowButtonView : UIView
+@interface CFFlowButtonView : UIScrollView
 
 /**
  *  存放需要显示的button

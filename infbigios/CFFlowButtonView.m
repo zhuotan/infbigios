@@ -22,9 +22,9 @@
 }
 
 - (void)layoutSubviews {
-
+    
     CGFloat margin = 16;
-
+    
     // 存放每行的第一个Button
     NSMutableArray *rowFirstButtons = [NSMutableArray array];
     
@@ -37,33 +37,33 @@
     // 对其他Button进行设置
     int row = 0;
     for (int i = 1; i < self.buttonList.count; i++) {
-        UIButton *button = self.buttonList[i];
-        
-        int sumWidth = 0;
-        int start = (int)[self.buttonList indexOfObject:rowFirstButtons[row]];
-        for (int j = start; j <= i; j++) {
-            UIButton *button = self.buttonList[j];
-                sumWidth += (button.width + margin);
-        }
-        sumWidth += 10;
-        
-        UIButton *lastButton = self.buttonList[i - 1];
-        if (sumWidth >= self.width) {
-            button.x = margin;
-            button.y = lastButton.y + margin + button.height;
-            [rowFirstButtons addObject:button];
-            row ++;
-        } else {
-            button.x = sumWidth - margin - button.width;
-            button.y = lastButton.y;
-        }
-    }
-    
-    
-    UIButton *lastButton = self.buttonList.lastObject;
-    self.height = CGRectGetMaxY(lastButton.frame) + 10;
-    
 
+            UIButton *button = self.buttonList[i];
+            
+            int sumWidth = 0;
+            int start = (int)[self.buttonList indexOfObject:rowFirstButtons[row]];
+            for (int j = start; j <= i; j++) {
+                UIButton *button = self.buttonList[j];
+                sumWidth += (button.width + margin);
+            }
+            sumWidth += 10;
+            
+            UIButton *lastButton = self.buttonList[i - 1];
+            if (sumWidth >= self.width) {
+                button.x = margin;
+                button.y = lastButton.y + margin + button.height;
+                [rowFirstButtons addObject:button];
+                row ++;
+            } else {
+                button.x = sumWidth - margin - button.width;
+                button.y = lastButton.y;
+            }
+    }
+
+    //UIButton *lastButton = self.buttonList.lastObject;
+    //self.height = CGRectGetMaxY(lastButton.frame) + 10;
+    self.height = 240;
+    self.showsVerticalScrollIndicator = YES;
 }
 
 

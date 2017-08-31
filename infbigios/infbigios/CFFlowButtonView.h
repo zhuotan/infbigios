@@ -3,12 +3,12 @@
 //  CFFlowButtonView
 //
 //  Created by 周凌宇 on 15/10/27.
-//  Copyright © 2015年 周凌宇. All rights reserved.
+//  Copyright © 2015年 周凌宇. All rights reserved.1
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CFFlowButtonView : UIView
+@interface CFFlowButtonView : UIScrollView
 
 /**
  *  存放需要显示的button
