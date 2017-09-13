@@ -3,9 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__37-[MainViewController dismissKeyBoard]_block_invoke:MainViewController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[MainViewController TouchDownInside:]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -14,16 +11,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MainViewController addSearchView]:MainViewController.m">
+         contextName = "__37-[MainViewController dismissKeyBoard]_block_invoke:MainViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FilingViewController tableView:cellForRowAtIndexPath:]:FilingViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "rx.size.width">
+               value = "cell.type.text">
             </PersistentString>
             <PersistentString
-               value = "SearchView2.contentSize">
+               value = "[dic objectForKey:@&quot;area_id&quot;]">
             </PersistentString>
             <PersistentString
-               value = "self.list1">
+               value = "[dic objectForKey:@&quot;cate&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "dic">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -32,6 +35,39 @@
          <PersistentStrings>
             <PersistentString
                value = "self.view.frame.origin.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[KeepViewController tableView:cellForRowAtIndexPath:]:KeepViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.year">
+            </PersistentString>
+            <PersistentString
+               value = "cell">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController addSearchView]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "SearchView2.contentSize">
+            </PersistentString>
+            <PersistentString
+               value = "rx.size.width">
+            </PersistentString>
+            <PersistentString
+               value = "self.list1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FilingViewController tableView:numberOfRowsInSection:]:FilingViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.flist count]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

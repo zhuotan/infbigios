@@ -25,12 +25,15 @@
 @end
 
 UIColor *myblue;
-CGRect rx;
+NSLock *theLock;
+NSInteger inde=0;
+//221.237.189.104
 NSString  *URLString = @"http://221.237.189.104:8080/titanweb/SolrTitanAction?method=nameSearch&name=";
 NSString  *URLString2 = @"http://221.237.189.104:8080/titanweb/SolrTitanAction?method=projectSearch&name=";
 NSString  *DisCompanyURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction?method=name&company=";
 NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction?method=load&project=";
 
+CGRect rect;
 @implementation MainViewController
 
 - (void)viewDidLoad {
@@ -38,7 +41,8 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
     // Do any additional setup after loading the view.
     //[self.GovButton.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     //[self.GovButton.layer setBorderWidth:1.0];
-    rx = [ UIScreen mainScreen ].bounds;
+    rect = [[UIScreen mainScreen] bounds];
+    
     myblue= [UIColor colorWithRed:87/255.0 green:210/255.0 blue:247/255.0 alpha:0.7];
     [self.GovButton.layer setCornerRadius:3];
     self.GovButton.layer.masksToBounds = YES;
@@ -120,6 +124,18 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
     _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
 }
 
+- (IBAction)GovAction:(id)sender {
+    inde = 0;
+    _type = 1;
+    [self dismissKeyBoard1];
+}
+
+- (IBAction)EnpAction:(id)sender {
+    inde = 1;
+    _type = 1;
+    [self dismissKeyBoard1];
+}
+
 -  (BOOL) isBlankString:(NSString *)string {
     
     if (string == nil || string == NULL) {
@@ -165,6 +181,192 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
     UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:0.5];
     return color;
 }
+-(void)dismissKeyBoard1
+{
+    [_ComSearch resignFirstResponder];
+    [_ProSearch resignFirstResponder];
+    // 获取数据
+    
+    NSString *word = nil;
+    
+    word = _ComSearch.text;
+    
+    if(![self isBlankString:word]){
+        _PageUrl = [URLString stringByAppendingString:word];
+        _PageUrl = [_PageUrl stringByAppendingString:@"&index="];
+        NSString *stringInt = nil;
+        if(inde == 0){
+            stringInt = @"0";
+        }else{
+            stringInt = @"1";
+        }
+        
+        _PageUrl = [_PageUrl stringByAppendingString:stringInt];
+        
+        NSString *encodedURL = [_PageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        NSURL *URL= [NSURL URLWithString: encodedURL];
+        
+        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+        
+        _dataTask = [_manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id data, NSError *error) {
+            if (error) {
+                NSLog(@"Error: %@", error);
+                [self alert];
+                return;
+            } else {
+                //NSLog(@"%@ %@", response, data);
+                //[myObject isKindOfClass:[NSString class]]
+                if(![data isKindOfClass:[NSArray class]]){
+                    [self alert];
+                    return;
+                }
+                if (_list1 == nil) {
+                    _list1 = [NSMutableArray array];
+                }else{
+                    [_list1 removeAllObjects];
+                }
+                NSArray *views = [self.ComSearchView subviews];
+                for(UIView *view in views){
+                    if([view isKindOfClass:UIButton.class]){
+                        [view removeFromSuperview];
+                    }
+                }
+                NSArray *array = data;
+                if([array count] == 0){
+                    [self alert];
+                    return;
+                }
+                for(NSString* item in array) {
+                    UIButton *button = [[[NSBundle mainBundle] loadNibNamed:@"MyButton" owner:self options:nil] lastObject];
+                    
+                    button.mas_key = @"1";
+                    
+                    button.titleLabel.font = [UIFont fontWithName:@"PingFangTC-Light" size:12];
+                    [button addTarget:self action:@selector(TouchDownInside:) forControlEvents:UIControlEventTouchDown];
+                    CGSize titleSize = [item sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:button.titleLabel.font.fontName size:button.titleLabel.font.pointSize]}];
+                    button.width = titleSize.width + 10;
+                    
+                    if(button.width > rect.size.width){
+                        button.width = rect.size.width - 30;
+                    }
+                    
+                    button.backgroundColor = [self randomColor];
+                    [button setTitle:item forState:UIControlStateNormal];
+                    
+                    [_list1 addObject:button];
+
+                }
+                [self addSearchView];
+                _type = 2;
+                [self dismissKeyBoard2];
+            }
+        }];
+        [_dataTask resume];
+    }else{
+        NSArray *views = [self.ComSearchView subviews];
+        for(UIView *view in views){
+            if([view isKindOfClass:UIButton.class]){
+                [view removeFromSuperview];
+            }
+        }
+        _type = 2;
+        [self dismissKeyBoard2];
+    }
+    
+}
+
+-(void)dismissKeyBoard2
+{
+    
+    NSString *word = nil;
+    
+    word = _ProSearch.text;
+    
+    if(![self isBlankString:word]){
+        
+        _PageUrl = [URLString2 stringByAppendingString:word];
+        
+        _PageUrl = [_PageUrl stringByAppendingString:@"&index="];
+        NSString *stringInt = nil;
+        if(inde == 0){
+            stringInt = @"0";
+        }else{
+            stringInt = @"1";
+        }
+        
+        _PageUrl = [_PageUrl stringByAppendingString:stringInt];
+        
+        NSString *encodedURL = [_PageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        NSURL *URL= [NSURL URLWithString: encodedURL];
+        
+        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+        
+        _dataTask = [_manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id data, NSError *error) {
+            if (error) {
+                NSLog(@"Error: %@", error);
+                [self alert];
+                return;
+            } else {
+                //NSLog(@"%@ %@", response, data);
+                //[myObject isKindOfClass:[NSString class]]
+                if(![data isKindOfClass:[NSArray class]]){
+                    [self alert];
+                    return;
+                }
+                if (_list2 == nil) {
+                    _list2 = [NSMutableArray array];
+                }else{
+                    [_list2 removeAllObjects];
+                }
+                NSArray *views = [self.ProSearchView subviews];
+                for(UIView *view in views){
+                    if([view isKindOfClass:UIButton.class]){
+                        [view removeFromSuperview];
+                    }
+                }
+                
+                NSArray *array = data;
+                if([array count] == 0){
+                    [self alert];
+                    return;
+                }
+                for(NSString* item in array) {
+                    UIButton *button = [[[NSBundle mainBundle] loadNibNamed:@"MyButton" owner:self options:nil] lastObject];
+                    
+                    button.mas_key = @"2";
+                    
+                    button.titleLabel.font = [UIFont fontWithName:@"PingFangTC-Light" size:12];
+                    [button addTarget:self action:@selector(TouchDownInside:) forControlEvents:UIControlEventTouchDown];
+                    CGSize titleSize = [item sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:button.titleLabel.font.fontName size:button.titleLabel.font.pointSize]}];
+                    button.width = titleSize.width + 10;
+                    
+                    if(button.width > rect.size.width){
+                        button.width = rect.size.width - 30;
+                    }
+                    
+                    button.backgroundColor = [self randomColor];
+                    [button setTitle:item forState:UIControlStateNormal];
+                    
+                    [_list2 addObject:button];
+                    
+                }
+                [self addSearchView];
+            }
+        }];
+        [_dataTask resume];
+    }else{
+        NSArray *views = [self.ProSearchView subviews];
+        for(UIView *view in views){
+            if([view isKindOfClass:UIButton.class]){
+                [view removeFromSuperview];
+            }
+        }
+        return;
+    }
+    
+}
 
 -(void)dismissKeyBoard
 {
@@ -184,6 +386,16 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
         }else{
             _PageUrl = [URLString2 stringByAppendingString:word];
         }
+        _PageUrl = [_PageUrl stringByAppendingString:@"&index="];
+        NSString *stringInt = nil;
+        if(inde == 0){
+            stringInt = @"0";
+        }else{
+            stringInt = @"1";
+        }
+        
+        _PageUrl = [_PageUrl stringByAppendingString:stringInt];
+        
         NSString *encodedURL = [_PageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
         NSURL *URL= [NSURL URLWithString: encodedURL];
@@ -193,8 +405,15 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
         _dataTask = [_manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id data, NSError *error) {
             if (error) {
                 NSLog(@"Error: %@", error);
+                [self alert];
+                return;
             } else {
                 //NSLog(@"%@ %@", response, data);
+                //[myObject isKindOfClass:[NSString class]]
+                if(![data isKindOfClass:[NSArray class]]){
+                    [self alert];
+                    return;
+                }
                 if(_type == 1){
                     if (_list1 == nil) {
                         _list1 = [NSMutableArray array];
@@ -222,6 +441,10 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
                     }
                 }
                 NSArray *array = data;
+                if([array count] == 0){
+                    [self alert];
+                    return;
+                }
                 for(NSString* item in array) {
                     UIButton *button = [[[NSBundle mainBundle] loadNibNamed:@"MyButton" owner:self options:nil] lastObject];
                     if(_type == 1){
@@ -229,16 +452,21 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
                     }else{
                         button.mas_key = @"2";
                     }
-                    button.titleLabel.font = [UIFont systemFontOfSize:11.0];
+                    button.titleLabel.font = [UIFont fontWithName:@"PingFangTC-Light" size:12];
                     [button addTarget:self action:@selector(TouchDownInside:) forControlEvents:UIControlEventTouchDown];
                     CGSize titleSize = [item sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:button.titleLabel.font.fontName size:button.titleLabel.font.pointSize]}];
                     button.width = titleSize.width + 10;
+                    
+                    if(button.width > rect.size.width){
+                        button.width = rect.size.width - 30;
+                    }
+                    
                     button.backgroundColor = [self randomColor];
                     [button setTitle:item forState:UIControlStateNormal];
                     if(_type == 1){
-                       [_list1 addObject:button];
+                        [_list1 addObject:button];
                     }else{
-                       [_list2 addObject:button];
+                        [_list2 addObject:button];
                     }
                 }
                 [self addSearchView];
@@ -250,7 +478,19 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
         [_ProSearch resignFirstResponder];
         return;
     }
+}
+
+-(void)alert{
     
+    //初始化提示框；
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"没有查询到相关的数据" preferredStyle:  UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //点击按钮的响应事件；
+    }]];
+    
+    //弹出提示框；
+    [self presentViewController:alert animated:true completion:nil];
 }
 
 -(void)TouchDownInside:(id)sender{
@@ -262,6 +502,17 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
     }else{
         _PageUrl = [DisProjectURL stringByAppendingString: btn.titleLabel.text];
     }
+    _PageUrl = [_PageUrl stringByAppendingString:@"&index="];
+    
+    NSString *stringInt = nil;
+    if(inde == 0){
+        stringInt = @"0";
+    }else{
+        stringInt = @"1";
+    }
+    
+    _PageUrl = [_PageUrl stringByAppendingString:stringInt];
+    
     NSString *encodedURL = [_PageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     TopoViewController *topo = [self.storyboard instantiateViewControllerWithIdentifier:@"TopoView"];
     topo.weburl = encodedURL;
@@ -313,7 +564,6 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
     
     if(_type == 1){
         CFFlowButtonView *SearchView1 = [[CFFlowButtonView alloc] initWithButtonList:self.list1];
-        SearchView1.contentSize = CGSizeMake(rx.size.width, 240);
         [self.view addSubview:SearchView1];
         self.ComSearchView = SearchView1;
         
@@ -325,7 +575,6 @@ NSString  *DisProjectURL =@"http://221.237.189.104:8080/titanweb/SolrTitanAction
         }];
     }else{
         CFFlowButtonView *SearchView2= [[CFFlowButtonView alloc] initWithButtonList:self.list2];
-        SearchView2.contentSize = CGSizeMake(rx.size.width, 240);
         [self.view addSubview:SearchView2];
         self.ProSearchView = SearchView2;
         

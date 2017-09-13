@@ -23,9 +23,9 @@ UIColor *mywhite;
     [super viewDidLoad];
     
     
-    _memstr = @"法定代表人：弓天云\n法定代表人职称：无\n企业负责人：郭主龙\n企业负责人职称：总经理\n技术负责人：卢冠楠\n技术负责人职称：总监";
+    _memstr = @"";
     
-    _orgstr =@"建设工程项目管理；工程勘察设计；承包与公司实力、规模、业绩相适应的国外工程项目，对外派遣实施上述境外工程所需的劳务人员；施工总承包；专业承包；开发、销售机械设备、计算机软件；设备租赁；项目投资；投资管理；资产管理；技术开发、技术咨询、技术服务、技术转让；经济信息咨询；公路管理、养护；货物进出口；代理进出口；技术进出口。";
+    _orgstr =@"";
     
     mywhite= [UIColor colorWithRed:87/255.0 green:210/255.0 blue:247/255.0 alpha:0.0];
 
@@ -62,7 +62,102 @@ UIColor *mywhite;
     [self.Range addTarget:self action:@selector(button2BackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
     [self.Range addTarget:self action:@selector(button2BackGroundNormal:) forControlEvents:UIControlEventTouchUpInside];
     
+    [self.CompLable setText:self.company];
+    
+    NSString *zcarea = [self.dictionary objectForKey:@"zcarea"];
+    NSString *zccity = [self.dictionary objectForKey:@"zccity"];
+    NSString *regplace = nil;
+    if([zcarea isEqualToString:@"北京"]||[zcarea isEqualToString:@"上海"]||[zcarea isEqualToString:@"重庆"]||[zcarea isEqualToString:@"天津"]){
+        regplace = zccity;
+    }else{
+        regplace = [zcarea stringByAppendingString:@"/"];
+        regplace = [regplace stringByAppendingString:zccity];
+    }
+    
+    NSString *OrganCodeL = @"机构代码：";
+    NSString *RegPlaceL = @"注册省市：";
+    NSString *UsedNameL = @"曾用名：";
+    NSString *AdmiDepartL = @"行政主管部门：";
+    NSString *BuslicenL = @"营业执照注册号：";
+    NSString *EnterTypeL = @"企业类型：";
+    NSString *EnterNatureL = @"企业性质：";
+    NSString *LicenPeriodL = @"营业执照日期：";
+    NSString *CreditCodeL = @"社会信誉代码：";
+    
+    
+    
+    NSString *fddbr = [self.dictionary objectForKey:@"fddbr"];
+    if(fddbr == nil){
+        fddbr = @"";
+    }
+    
+    NSString *fddbrzc = [self.dictionary objectForKey:@"fddbrzc"];
+    if(fddbrzc == nil){
+        fddbrzc= @"";
+    }
+    
+    NSString *qyfzr = [self.dictionary objectForKey:@"qyfzr"];
+    if(qyfzr == nil){
+        qyfzr = @"";
+    }
+    
+    NSString *qyfzrc = [self.dictionary objectForKey:@"qyfzrc"];
+    if(qyfzrc == nil){
+        qyfzrc = @"";
+    }
+    
+    NSString *jsfzr = [self.dictionary objectForKey:@"jsfzr"];
+    if(jsfzr == nil){
+        jsfzr = @"";
+    }
+    
+    NSString *jsfzrzz = [self.dictionary objectForKey:@"jsfzrzz"];
+    if(jsfzrzz == nil){
+        jsfzrzz =@"";
+    }
+
+    _memstr = [_memstr stringByAppendingString:@"法定代表人："];
+    _memstr = [_memstr stringByAppendingString:fddbr];
+    _memstr = [_memstr stringByAppendingString:@"\n"];
+    _memstr = [_memstr stringByAppendingString:@"法定代表人职称："];
+    _memstr = [_memstr stringByAppendingString:fddbrzc];
+    _memstr = [_memstr stringByAppendingString:@"\n"];
+    _memstr = [_memstr stringByAppendingString:@"企业负责人："];
+    _memstr = [_memstr stringByAppendingString:qyfzr];
+    _memstr = [_memstr stringByAppendingString:@"\n"];
+    _memstr = [_memstr stringByAppendingString:@"企业负责人职称："];
+    _memstr = [_memstr stringByAppendingString:qyfzrc];
+    _memstr = [_memstr stringByAppendingString:@"\n"];
+    _memstr = [_memstr stringByAppendingString:@"技术负责人"];
+    _memstr = [_memstr stringByAppendingString:jsfzr];
+    _memstr = [_memstr stringByAppendingString:@"\n"];
+    _memstr = [_memstr stringByAppendingString:@"技术负责人职称："];
+    _memstr = [_memstr stringByAppendingString:jsfzrzz];
+    
+    OrganCodeL = [OrganCodeL stringByAppendingString:[self.dictionary objectForKey:@"jgdm"]];
+    RegPlaceL = [RegPlaceL stringByAppendingString:regplace];
+    UsedNameL = [UsedNameL stringByAppendingString:[self.dictionary objectForKey:@"oldname"]];
+    AdmiDepartL = [AdmiDepartL stringByAppendingString:[self.dictionary objectForKey:@"xzzgbm"]];
+    BuslicenL = [BuslicenL stringByAppendingString:[self.dictionary objectForKey:@"yyzz"]];
+    EnterTypeL = [EnterTypeL stringByAppendingString:[self.dictionary objectForKey:@"qylx"]];
+    EnterNatureL = [EnterNatureL stringByAppendingString:[self.dictionary objectForKey:@"qyxz"]];
+    LicenPeriodL = [LicenPeriodL stringByAppendingString:[self.dictionary objectForKey:@"yyzzrq"]];
+    CreditCodeL = [CreditCodeL stringByAppendingString:[self.dictionary objectForKey:@"shxydm"]];
+    
+    [self.OrganCode setText:OrganCodeL];
+    [self.RedPlace setText:RegPlaceL];
+    [self.UsedName setText:UsedNameL];
+    [self.AdmiDepart setText:AdmiDepartL];
+    [self.Buslicen setText:BuslicenL];
+    [self.EnterType setText:EnterTypeL];
+    [self.EnterNature setText:EnterNatureL];
+    [self.LicenPeriod setText:LicenPeriodL];
+    [self.CreditCode setText:CreditCodeL];
+    
+    self.orgstr = [self.dictionary objectForKey:@"yyfw"];
+    
     [self.InfoView setText:_memstr];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,6 +203,14 @@ UIColor *mywhite;
     [sender.layer setBorderColor:[UIColor lightGrayColor].CGColor];
 
     [self.Member addSubview:_bottomBorder];
+}
+
+- (IBAction)CloseAction:(id)sender {
+    UIViewController *root = self.presentingViewController;
+    while (root.presentingViewController) {
+        root = root.presentingViewController;
+    }
+    [root dismissViewControllerAnimated:YES completion:NULL];
 }
 
 

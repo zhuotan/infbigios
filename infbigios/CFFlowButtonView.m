@@ -9,8 +9,9 @@
 #import "CFFlowButtonView.h"
 
 @implementation CFFlowButtonView
-
+CGRect rx;
 - (instancetype)initWithButtonList:(NSMutableArray *)buttonList {
+    rx = [ UIScreen mainScreen ].bounds;
     if (self = [super init]) {
         _buttonList = buttonList;
         
@@ -63,7 +64,9 @@
     //UIButton *lastButton = self.buttonList.lastObject;
     //self.height = CGRectGetMaxY(lastButton.frame) + 10;
     self.height = 240;
-    self.showsVerticalScrollIndicator = YES;
+    self.scrollEnabled = true;
+    self.showsVerticalScrollIndicator = true;
+    self.contentSize = CGSizeMake(rx.size.width, 480);
 }
 
 
